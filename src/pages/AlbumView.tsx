@@ -49,8 +49,8 @@ const AlbumView = () => {
             <br /><br />
             <div className={style.container}>
                 { photosInTheAlbum.map((item, index) => (
-                    <Link to={`/album/${id}/photo/${item.id}`} className={style.cardImg}>
-                        <img key={index} src={item.thumbnailUrl} alt="" />
+                    <Link to={`/album/${id}/photo/${item.id}`} key={index} className={style.cardImg}>
+                        <img src={item.thumbnailUrl} alt="" />
                     </Link>
                 ))}
             </div>
