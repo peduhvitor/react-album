@@ -1,6 +1,6 @@
-import { useRoutes } from "react-router";
-import AlbumView from "./pages/AlbumView";
+import { useRoutes } from "react-router-dom";
 import Home from "./pages/Home";
+import AlbumView from "./pages/AlbumView";
 import PhotoView from "./pages/PhotoView";
 
 const Routes = () => {

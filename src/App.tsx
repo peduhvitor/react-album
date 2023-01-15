@@ -1,18 +1,19 @@
-import Routes from "./Routes"
+import Routes from "./Routes";
+import style from './AppStyle.module.css';
 
-function App() {
+const App = () => {
 
     return (
-        <div>
-            <header>
+        <div className={style.container}>
+            <header className={style.header}>
                 Galeria de fotos
             </header>
-                <Routes />
-            <footer>
+                <Routes/>
+            <footer className={style.footer}>
                 Todos os direitos reservados
             </footer>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;

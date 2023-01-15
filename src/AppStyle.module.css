@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap:24px
+}
+
+.header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    box-shadow: 0px 2px 4px rgba(0,0,0, .1);
+}
+
+.footer {
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0px -2px 4px rgba(0,0,0, .1);
+}
