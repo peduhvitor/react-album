@@ -23,11 +23,14 @@ const Home = () => {
 
     return (
         <div className={style.container}>
-            {albums.map((item, index) => (
+            { albums.length > 0 ? albums.map((item, index) => (
                 <Link key={index} to={`/album/${item.id}`} className={style.card}>
                     {item.title}
                 </Link>
-            ))}
+            )) 
+            : 
+                <div>Carregando...</div>
+            }
         </div>
     )
 }

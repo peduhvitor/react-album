@@ -35,10 +35,14 @@ const PhotoView = () => {
         <div>
             <button onClick={() => navigate(-1)}>Voltar</button>
             <br /><br />
-            <p>{photo?.title}</p>
+            <p>{photo?.title ? photo.title : 'Carregando...'}</p>
             <br /><br />
             <div className={style.container}>
+            {photo?.thumbnailUrl ? 
                 <img src={photo?.thumbnailUrl} alt="" />
+                :
+                <div>Carregando...</div>
+            }
             </div>
             
         </div>

@@ -45,14 +45,17 @@ const AlbumView = () => {
         <div>
             <button onClick={() => navigate(-1)}>Voltar</button>
             <br /><br />
-            <h2>{albumInfo?.title}</h2>
+            <h2>{albumInfo?.title ? albumInfo.title : 'Carregando...'}</h2>
             <br /><br />
             <div className={style.container}>
-                { photosInTheAlbum.map((item, index) => (
+                { photosInTheAlbum ? photosInTheAlbum.map((item, index) => (
                     <Link to={`/album/${id}/photo/${item.id}`} key={index} className={style.cardImg}>
                         <img src={item.thumbnailUrl} alt="" />
                     </Link>
-                ))}
+                ))
+                :
+                <div>Carregando...</div>
+            }
             </div>
             
         </div>
