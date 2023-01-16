@@ -7,7 +7,7 @@ const Routes = () => {
     return useRoutes([
         {path: '/', element: <Home/>},
         {path: '/album/:id', element: <AlbumView/>},
-        {path: '/album/:id/photo/:id', element: <PhotoView/>}
+        {path: '/album/:idAlbum/photo/:id', element: <PhotoView/>}
     ]);
 }
 

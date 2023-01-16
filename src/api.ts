@@ -24,6 +24,7 @@ export const getAllPhotosFromAlbumById = async (id:number) => {
     return response.data;
 }
 
-export const getOnePhotoById = async () => {
-    
+export const getOnePhotoById = async (id: number) => {
+    const response = await http.get(`/photos/${id}`);
+    return response.data;
 }
