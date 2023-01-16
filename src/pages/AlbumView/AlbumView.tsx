@@ -1,21 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getAlbumById, getAllPhotosFromAlbumById } from "../api";
+import { getAlbumById, getAllPhotosFromAlbumById } from "../../api";
+import { AlbumInfo, PhotosInTheAlbum } from "./types";
 import style from './AlbumView.module.css';
 
-type AlbumInfo = {
-    userId: number,
-    id: number,
-    title: string
-}
-
-type PhotosInTheAlbum = {
-    albumId: number,
-    id: number,
-    title: string,
-    url: string,
-    thumbnailUrl: string
-}
 
 const AlbumView = () => {
     const [albumInfo, setAlbumInfo] = useState<AlbumInfo>();

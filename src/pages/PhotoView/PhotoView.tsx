@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getOnePhotoById } from "../api";
+import { getOnePhotoById } from "../../api";
 import style from "./PhotoView.module.css";
+import { Photo } from "./types";
 
-type Photo = {
-    albumId: number,
-    id: number,
-    title: number,
-    url: string,
-    thumbnailUrl: string
-}
 
 const PhotoView = () => {
     const [photo, setPhoto] = useState<Photo>();
@@ -27,9 +21,6 @@ const PhotoView = () => {
         const data = await getOnePhotoById(Number(id));
         setPhoto(data);
     }
-
-
-    
 
     return (
         <div>

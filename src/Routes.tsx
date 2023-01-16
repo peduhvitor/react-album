@@ -1,8 +1,8 @@
 import { useRoutes } from "react-router-dom";
-import Home from "./pages/Home";
-import AlbumView from "./pages/AlbumView";
-import PhotoView from "./pages/PhotoView";
-import NotFound from "./pages/notFound";
+import Home from "./pages/Home/Home";
+import AlbumView from "./pages/AlbumView/AlbumView";
+import PhotoView from "./pages/PhotoView/PhotoView";
+import NotFound from "./pages/NotFound";
 
 const Routes = () => {
     return useRoutes([

@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getAllAlbums } from "../api";
+import { getAllAlbums } from "../../api";
+import { Albums } from "./types";
 import style from './HomeStyle.module.css';
 
-type Albums = {
-    userId: number,
-    id: number,
-    title: string
-}
+
 
 const Home = () => {
     const [albums, setAlbums] = useState<Albums[]>([]);
