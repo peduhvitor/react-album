@@ -2,8 +2,19 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .container img {
     width: 40%;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90vw;
+    }
+    
+    .container img {
+        width: 100%;
+    }
 }
